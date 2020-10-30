@@ -1,0 +1,17 @@
+{{ define "content" }}
+<div class="alert alert-success mt-5 mx-auto" role="alert" style="width: 25rem">{{ .status }}</div>
+<div class="card mb-5 mx-auto" style="width: 25rem">
+    <div class="card-header bg-success text-center text-light">{{ .title }}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ .email }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ .username }}</h6>
+        <p class="card-text mt-3">
+            {{ .fullName }}
+            <br />
+            {{ .password }}
+        </p>
+
+        <a href="/" class="card-link">Register</a>
+    </div>
+</div>
+{{ end }}

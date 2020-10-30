@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+        <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" class="init">
+            $(document).ready(function () {
+                $("#example").DataTable();
+            });
+        </script>
+        <title>HTML Pagination</title>
+    </head>
+
+    <body>
+        <table id="example" class="display" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range . }}
+                <tr>
+                    <td>{{ .employeeID }}</td>
+                    <td>{{ .fullName }}</td>
+                    <td>{{ .address }}</td>
+                    <td>{{ .phone }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
